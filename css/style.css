@@ -28,8 +28,8 @@ background-color: var(--1);
     background-color: var(--2);
     color: var(--3);
     text-align: center;
-    border: 2px black solid;
-    border-radius: 10px;
+/*    border: 2px black solid; 
+    border-radius: 10px; */
     padding-bottom: 25px;
 }
 
@@ -39,6 +39,6 @@ background-color: var(--1);
    color: var(--5);
    padding: 5%;
    text-align: center;
-   border: 2px solid black;
+/*   border: 2px solid black; */
 }
 
