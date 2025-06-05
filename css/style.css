@@ -23,6 +23,10 @@ header {
 background-color: var(--1);
 }
 
+.menu {
+padding: 15%;
+}
+
 
 .form-section {
     background-color: var(--2);
