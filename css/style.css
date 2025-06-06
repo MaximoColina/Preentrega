@@ -11,6 +11,8 @@
     --3: #395C6B;
     --4: #D4CB92;
     --5: #E6E1C5;
+    --6: #1a733d;
+
 }
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
@@ -39,13 +41,13 @@ background-color: var(--1);
 .menu-principal li a {
     display: block;
     text-decoration: none;
-    color: #fff;
+    color: var(--5);
     padding: .8em 1em;
 }
 
 
 .menu-principal li a:hover {
-    background:#1a733d;
+    background: var(--6);
 }
 
 
@@ -71,7 +73,7 @@ background-color: var(--1);
 
 
 .form-titulo {
-    color: white;
+    color: var(--5);
     font-size: 20px;
 }
 
