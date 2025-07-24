@@ -22,13 +22,35 @@
   </header>
   <main>
     <section class="section">
+
+            <form action="" method="get" target="_blank" id="form" class="form">
+            <h2> Formulario de contacto</h2>
+            <span id="empty-apellido-error" class="error-msg"></span>
+            <span id="empty-nombre-error" class="error-msg"></span>
+            <span id="empty-email-error" class="error-msg"></span>            
+            <span id="empty-comentarios-error" class="error-msg"></span>           
+            <fieldset class="form-fieldset">
+            <input type="text" class="form-input" id="apellido" name="apellido"  maxlength="50" placeholder="Apellido:">
+            <input type="text" class="form-input" id="nombre" name="nombre"  maxlength="50" placeholder="Nombre:">
+            <input type="email" class="form-input" name="correo" id="correo"   maxlength="50" placeholder="Correo electrónico:">  
+            <textarea name="comentarios" class="form-textarea" id="comentarios"  maxlength="200" placeholder="Escribe tu consulta aquí..."></textarea>
+            <input type="submit" class="boton-submit" value="ENVIAR CONSULTA">
+            </fieldset>
+            </form>
+<!--       
       <form class="form">
       <h2 class="form-titulo"> Formulario de contacto</h2>  
+      <div id="empty-name-error" class="error"></div>
+      <div id="empty-email-error" class="error"></div>
+
+
       <input type="text" name="nombre" id="nombre" placeholder="nombre"> <br>
+      <input type="text" name="apellido" id="apellido" placeholder="apellido"> <br>      
       <input type="email" name="email" id="email" placeholder="correo electronico "><br>
-      <textarea rows="8" id="mensaje" placeholder="Ingrese su mensaje"></textarea> <br>
-      <input type="button" value="Enviar">
-      </form>
+      <textarea name="comentarios" rows="8" id="comentarios" placeholder="Ingrese su mensaje"></textarea> <br>
+      <input type="submit" class="boton-submit" value="ENVIAR CONSULTA">    -->  
+<!--      <input type="button" value="Enviar" id="btnEnviar">-->
+<!--      </form>  -->
       
     </section>
 
