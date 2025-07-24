@@ -27,12 +27,34 @@ background-color: var(--1);
 }
 
 
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+
+.logo-titulo img {
+    vertical-align: middle;
+    border-radius: 20%;
+}
+
+
+.logo-titulo h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+
 .menu-principal ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
     background: var(--3);
-    display: flex; /*flex*/
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -61,8 +83,8 @@ background-color: var(--1);
     background-color: var(--2);
     color: var(--3);
     text-align: center;
-
-    height: 70vh;
+    padding-top: 30px;
+    height: 90vh; 
     padding-bottom: 25px;
     background-image: url(../media/img/bh2.jpg);
     background-position: center;
@@ -76,21 +98,6 @@ background-color: var(--1);
     color: var(--5);
     font-size: 20px;
 }
-
-/*
-.form{
-    max-width: 450px;
-    margin: auto;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 20px;
-    margin-top: 0px;
-    margin-bottom: 20px;
-}
-
-*/
-
 
 
 /* Estilos formulario */

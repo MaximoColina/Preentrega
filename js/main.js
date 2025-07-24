@@ -1,5 +1,3 @@
-
-
 /* validaciones */
 // Declaración variables
 const form = document.querySelector('#form');
@@ -16,16 +14,17 @@ hideAllErrors();
 
 let esValido = true;
 
+
   // Funciones
 if (!validarApellidoFt()) {
-    showError('empty-apellido', 'El apellido es obligatorio o inválido');
+    showError('empty-apellido', 'Ingrese un apellido válido');
     apellidoIn.focus();
     esValido=false;
 }
 
 
 if (!validarNombreFt()) {
-    showError('empty-nombre','El nombre es obligatorio o inválido');
+    showError('empty-nombre','Ingrese un nombre válido');
     if (esValido) nombreIn.focus();
     esValido=false;
 }
@@ -46,8 +45,6 @@ if (!validarComentariosFt()) {
 if(esValido){
     form.submit();
 }
-
-
 });
 
 
@@ -77,6 +74,7 @@ const comentarios = comentariosIn.value.trim();
 return comentarios.length > 0 && comentarios.length <= 200;
 }
 
+
 function showError(fieldId,message){
     const errorElement = document.getElementById(fieldId+'-error');
     if(errorElement){
@@ -93,6 +91,7 @@ function hideAllErrors(){
     errorIds.forEach(id => hideError(id));
 }
 
+
 function hideError(fieldId){
     const errorElement = document.getElementById(fieldId+'-error');
     if (errorElement){
@@ -101,63 +100,4 @@ function hideError(fieldId){
     }
 }
 
-/*
 
-function validateForm(){
-    const nombre = document.getElementById('nombre').value;
-    const email = document.getElementById('email').value;
-    let esValido = true;
-
-    if(nombre.trim()=== ''){
-        showError('empty-name','El nombre es obligatorio');
-        esValido = false;
-
-    }else{
-        hideError('empty-name')
-    }
-
-
-    if(email.trim()=== ''){
-        showError('empty-email','El email es obligatorio');
-        esValido = false;
-
-    }else{
-        hideError('empty-email')
-    }
-
-
-
-
-    return esValido;
-}
-
-
-
-
-/* mensajes de error   */ /*
-function showError(fieldId, message){
-    const errorElement = document.getElementById(fieldId+'-error');
-    errorElement.textContent =" X "+message;
-    errorElement.style.display = 'block';
-
-}
-
-
-
-/* ocultar mensajes de error   */ /*
-function hideError(fieldId){
-    const errorElement = document.getElementById(fieldId+'-error');
-    errorElement.style.display = 'none';
-}
-
-
-const btnEnviar= document.getElementById('btnEnviar');
-btnEnviar.addEventListener('click', function(event){
-    event.preventDefault;
-    if(validateForm()){
-        window.location.href="../pages/validacion.html"
-    }
-});
-
-
-/*     */ 
