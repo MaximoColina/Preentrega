@@ -1,3 +1,7 @@
+window.addEventListener('load', () => {
+    document.getElementById('form').reset();
+});
+
 /* validaciones */
 // Declaración variables
 const form = document.querySelector('#form');
