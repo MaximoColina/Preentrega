@@ -103,6 +103,3 @@ function hideError(fieldId){
         errorElement.style.display = 'none';
     }
 }
-
-
-
