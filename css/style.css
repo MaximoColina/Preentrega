@@ -377,6 +377,11 @@ display: none;
     flex-direction: column;
 }    
 
+.busqueda-container2{order: 2;}
+.logo-titulo{order: 1;}
+.iconos-header2{order: 3;}
+
+
 .menu-principal ul {
     flex-direction: column;
 }
