@@ -8,12 +8,29 @@
     <title>Herramientas electricas</title>
 </head>
 <body>
+
   <header>
-    <div class="logo-titulo">
-      <img src="../media/img/logo.jpg" alt="logo de ferreteria" width="50" height="50">
-      <h1>HERRAMIENTAS "SAN MIGUEL"</h1>
+
+    <!-- Barra buscador, título e iconos usuario y carrito -->
+    <div class="bloque-titulo">
+      <div class="busqueda-container2">
+        <input type="text" id="busqueda-menu" placeholder="Buscar en el menú...">
+        <button id="boton-buscar" title="Buscar"><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="logo-titulo">
+        <img src="../media/img/logo.jpg" alt="logo de ferreteria" width="50" height="50">
+        <h1>HERRAMIENTAS "SAN MIGUEL"</h1>
+      </div>
+
+      <div class="iconos-header2">
+        <a href="#" title="Usuario"><i class="fas fa-user"></i></a>
+        <a href="#" title="Carrito"><i class="fas fa-shopping-cart"></i></a>
+      </div>
+
     </div>
 
+    <!-- Menú principal -->
     <nav class="menu-principal">
       <ul>
         <li><a href="../index.html">INICIO</a></li>
@@ -24,6 +41,8 @@
     </nav>  
 
   </header>
+
+
   <main>
     <section class="section">
       
@@ -96,10 +115,7 @@
   </div>
 </footer>
   
-  <script src="../js/main.js"></script>
-
-
-
-
+<script src="../js/main.js"></script>
+<script src="../js/busqueda.js"></script>
 </body>
 </html>
