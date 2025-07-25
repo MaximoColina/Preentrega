@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">   
     <link rel="stylesheet" href="./css/style.css" >
     <title>Inicio</title>
 </head>
@@ -30,9 +31,69 @@
 
   </main>
 
-  <footer class="footer">
+<footer class="footer">
+  <div class="footer-container">
 
-  </footer>
+    <!-- Datos de contacto -->
+    <div class="footer-info">
+      <h3>HERRAMIENTAS "SAN MIGUEL"</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Av. San Martín 1234, Buenos Aires</p>
+      <p><i class="fas fa-phone"></i> (011) 1234-5678</p>
+      <p><i class="fas fa-envelope"></i> contacto@sanmiguelherramientas.com</p>
+      <p><i class="fab fa-whatsapp"></i> +54 9 11 2345-6789</p>
+    </div>
+
+    <!-- Enlaces internos -->
+    <div class="footer-links">
+      <h4>Secciones</h4>
+      <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./pages/electricas.html">Herramientas Eléctricas</a></li>
+        <li><a href="./pages/manuales.html">Herramientas Manuales</a></li>
+        <li><a href="./pages/contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="footer-redes">
+      <h4>Seguinos</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <!-- Newsletter con Formspree -->
+    <div class="footer-newsletter">
+      <h4>Suscribite al Newsletter</h4>
+      <form action="https://formspree.io/f/xyzpwzrz" method="POST" class="newsletter-form" autocomplete="off">
+        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+        <input type="hidden" name="_subject" value="Nueva suscripción al newsletter">
+        <input type="hidden" name="_captcha" value="false">
+        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+    <!-- Medios de pago -->
+    <div class="footer-pagos">
+      <h4>Medios de pago</h4>
+      <div class="payment-icons">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-amex"></i>
+        <img src="./media/img/mercadopago.png" alt="MercadoPago">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-copy">
+    <p>&copy; 2025 HERRAMIENTAS "SAN MIGUEL" - Todos los derechos reservados</p>
+  </div>
+</footer>
 
   <script src="./js/main.js"></script>
 
