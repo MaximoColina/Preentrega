@@ -49,6 +49,7 @@ background-color: var(--1);
 }
 
 
+/* Menú principal  */
 .menu-principal ul{
     list-style-type: none;
     padding: 0;
@@ -192,6 +193,7 @@ display: none;
 }
 
 
+/* Footer */
 .footer {
   background-color: var(--3);
   color: var(--5);
@@ -381,4 +383,5 @@ display: none;
     justify-content: center;
   }
 }
+
 
