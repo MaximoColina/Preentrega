@@ -50,22 +50,27 @@ background-color: var(--1);
 
 
 /* Menú principal  */
-.menu-principal ul{
+.menu-principal ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     background: var(--3);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* Mejor para alinear en responsivo */
 }
 
+.menu-principal li {
+    flex: 1 0 25%; /* 4 elementos, 25% cada uno */
+    text-align: center;
+    min-width: 200px; /* Opcional para evitar que se achiquen demasiado */
+}
 
 .menu-principal li a {
     display: block;
     text-decoration: none;
     color: var(--5);
-    padding: .8em 1em;
+    padding: 1em;
 }
 
 
@@ -73,11 +78,6 @@ background-color: var(--1);
     background: var(--6);
 }
 
-
-.menu-principal li {
-    flex: 1 0 auto;
-    text-align: center;
-}
 
 
 .section {
@@ -371,6 +371,20 @@ display: none;
 
 /* Responsive */
 @media screen and (max-width: 768px) {
+
+
+.menu-principal ul {
+    flex-direction: column;
+}
+
+.menu-principal li {
+    flex: 1 0 100%;
+    width: 100%;
+}
+
+
+
+
   .footer-container {
     flex-direction: column;
     align-items: center;
