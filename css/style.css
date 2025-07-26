@@ -91,7 +91,7 @@ background-color: var(--1);
     padding-top: 30px;
     height: 90vh; 
     padding-bottom: 25px;
-    background-image: url(../media/img/bh2.jpg);
+/*    background-image: url(../media/img/bh2.jpg); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -511,4 +511,83 @@ display: none;
 }
 
 
+
+
+
+
+.productos { display: flex; flex-wrap: wrap; gap: 35px; justify-content: center; padding: 35px; }
+
+
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 265px;
+  min-height: 300px; /* 420 Aumenta la altura general */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2px; /* 12 Separa imagen, título, precio y botón */
+  border-radius: 10px;
+  align-items: center;
+}
+
+.card img {
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  margin-bottom: 10px; /* separa imagen del título */
+}
+
+.card h3 {
+  margin: 10px 0 5px 0; /* espacio arriba y abajo */
+}
+
+.card p {
+  margin: 5px 0 10px 0; /* espacio sobre y bajo el precio */
+}
+
+.card button {
+  margin-top: auto;
+  padding: 8px 12px;
+  background-color: #395C6B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #1a733d;
+}
+
+
+/*
+
+td:first-child {
+  text-align: center;
+}
+
+td:first-child img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+.card { border: 1px solid #ccc; 
+  padding: 20px; 
+  width: 265px; 
+  text-align: center; 
+  border-radius: 10px;}
+
+.card img { width: 170px; 
+  height: 170px; 
+  object-fit: contain; }
+
+*/
 
