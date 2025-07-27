@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">   
     <link rel="stylesheet" href="../css/style.css" >
+    <link rel="stylesheet" href="../css/carrito.css">
     <title>Herramientas manuales</title>
 </head>
 <body>
-
+<!-- Estos elementos serán creados dinámicamente por carrito.js, pero puedes agregarlos manualmente si prefieres -->
+<div class="overlay" id="overlay" onclick="toggleCarrito()"></div>
+<div class="carrito-sidebar" id="carrito-sidebar">
+  <div class="carrito-header">
+    <h3>Tu Carrito</h3>
+    <button class="close-carrito" onclick="toggleCarrito()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="carrito-items" id="carrito-items"></div>
+  <div class="carrito-total">Total: <span id="carrito-total">$0</span></div>
+</div>
   <header>
 
     <!-- Barra buscador, título e iconos usuario y carrito -->
@@ -23,10 +33,10 @@
         <h1>HERRAMIENTAS "SAN MIGUEL"</h1>
       </div>
 
-      <div class="iconos-header2">
-        <a href="#" title="Usuario"><i class="fas fa-user"></i></a>
-        <a href="#" title="Carrito"><i class="fas fa-shopping-cart"></i></a>
-      </div>
+<div class="carrito-icon-container">
+  <a href="#" title="Carrito" onclick="toggleCarrito(); return false;"><i class="fas fa-shopping-cart"></i></a>
+  <div class="carrito-cantidad" id="carrito-cantidad" style="display: none;">0</div>
+</div>
 
     </div>
 
@@ -115,7 +125,7 @@
 </footer>
 
 <script src="../js/main.js"></script>
-
+<script src="../js/carrito.js"></script>
 <script src="../js/productosM.js" ></script>
 </body>
 </html>

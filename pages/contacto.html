@@ -1,137 +1,206 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">   
-    <link rel="stylesheet" href="../css/style.css" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Contacto</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <!-- Barra buscador, título e iconos usuario y carrito -->
+      <div class="bloque-titulo">
+        <div class="busqueda-container2">
+          <input
+            type="text"
+            id="busqueda-menu"
+            placeholder="Buscar en el menú..."
+          />
+          <button id="boton-buscar" title="Buscar">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
 
-  <header>
+        <div class="logo-titulo">
+          <img
+            src="../media/img/logo.jpg"
+            alt="logo de ferreteria"
+            width="50"
+            height="50"
+          />
+          <h1>HERRAMIENTAS "SAN MIGUEL"</h1>
+        </div>
 
-    <!-- Barra buscador, título e iconos usuario y carrito -->
-    <div class="bloque-titulo">
-      <div class="busqueda-container2">
-        <input type="text" id="busqueda-menu" placeholder="Buscar en el menú...">
-        <button id="boton-buscar" title="Buscar"><i class="fas fa-search"></i></button>
+        <div class="carrito-icon-container">
+          <a href="#" title="Carrito" onclick="toggleCarrito(); return false;"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+          <div
+            class="carrito-cantidad"
+            id="carrito-cantidad"
+            style="display: none"
+          >
+            0
+          </div>
+        </div>
       </div>
 
-      <div class="logo-titulo">
-        <img src="../media/img/logo.jpg" alt="logo de ferreteria" width="50" height="50">
-        <h1>HERRAMIENTAS "SAN MIGUEL"</h1>
+      <!-- Menú principal -->
+      <nav class="menu-principal">
+        <ul>
+          <li><a href="../index.html">INICIO</a></li>
+          <li><a href="electricas.html">HERRAMIENTAS ELECTRICAS</a></li>
+          <li><a href="manuales.html">HERRAMIENTAS MANUALES</a></li>
+          <li><a href="contacto.html">CONTACTENOS</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <!-- Formulario con Formspree y validado con JS -->
+        <form
+          action="https://formspree.io/f/xovldqpb"
+          method="post"
+          id="form"
+          class="form"
+          novalidate
+          autocomplete="off"
+        >
+          <h2>Formulario de contacto</h2>
+          <span id="empty-apellido-error" class="error-msg"></span>
+          <span id="empty-nombre-error" class="error-msg"></span>
+          <span id="empty-email-error" class="error-msg"></span>
+          <span id="empty-comentarios-error" class="error-msg"></span>
+          <fieldset class="form-fieldset">
+            <input type="text" name="_gotcha" style="display: none" />
+            <input
+              type="text"
+              class="form-input"
+              id="apellido"
+              name="apellido"
+              maxlength="50"
+              placeholder="Apellido:"
+            />
+            <input
+              type="text"
+              class="form-input"
+              id="nombre"
+              name="nombre"
+              maxlength="50"
+              placeholder="Nombre:"
+            />
+            <input
+              type="email"
+              class="form-input"
+              name="correo"
+              id="correo"
+              maxlength="50"
+              placeholder="Correo electrónico:"
+            />
+            <textarea
+              name="comentarios"
+              class="form-textarea"
+              id="comentarios"
+              maxlength="200"
+              placeholder="Escribe tu consulta aquí..."
+            ></textarea>
+            <input type="submit" class="boton-submit" value="ENVIAR CONSULTA" />
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Datos de contacto -->
+        <div class="footer-info">
+          <h3>HERRAMIENTAS "SAN MIGUEL"</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Av. San Martín 1234, Buenos
+            Aires
+          </p>
+          <p><i class="fas fa-phone"></i> (011) 1234-5678</p>
+          <p>
+            <i class="fas fa-envelope"></i> contacto@sanmiguelherramientas.com
+          </p>
+          <p><i class="fab fa-whatsapp"></i> +54 9 11 2345-6789</p>
+        </div>
+
+        <!-- Enlaces internos -->
+        <div class="footer-links">
+          <h4>Secciones</h4>
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="electricas.html">Herramientas Eléctricas</a></li>
+            <li><a href="manuales.html">Herramientas Manuales</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="footer-redes">
+          <h4>Seguinos</h4>
+          <div class="social-icons">
+            <a href="#"
+              ><i class="fab fa-facebook-f" id="Idfa-facebook-f"></i
+            ></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-youtube" id="Idfa-youtube"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Newsletter con Formspree -->
+        <div class="footer-newsletter">
+          <h4>Suscribite al Newsletter</h4>
+          <form
+            action="https://formspree.io/f/xyzpwzrz"
+            method="POST"
+            class="newsletter-form"
+            autocomplete="off"
+          >
+            <input
+              type="email"
+              name="email"
+              placeholder="Tu correo electrónico"
+              required
+            />
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nueva suscripción al newsletter"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+
+        <!-- Medios de pago -->
+        <div class="footer-pagos">
+          <h4>Medios de pago</h4>
+          <div class="payment-icons">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <img src="../media/img/mercadopago.png" alt="MercadoPago" />
+          </div>
+        </div>
       </div>
 
-      <div class="iconos-header2">
-        <a href="#" title="Usuario"><i class="fas fa-user"></i></a>
-        <a href="#" title="Carrito"><i class="fas fa-shopping-cart"></i></a>
+      <div class="footer-copy">
+        <p>
+          &copy; 2025 HERRAMIENTAS "SAN MIGUEL" - Todos los derechos reservados
+        </p>
       </div>
+    </footer>
 
-    </div>
-
-    <!-- Menú principal -->
-    <nav class="menu-principal">
-      <ul>
-        <li><a href="../index.html">INICIO</a></li>
-        <li><a href="electricas.html">HERRAMIENTAS ELECTRICAS</a></li>
-        <li><a href="manuales.html">HERRAMIENTAS MANUALES</a></li>
-        <li><a href="contacto.html">CONTACTENOS</a></li>
-      </ul>
-    </nav>  
-
-  </header>
-
-  <main>
-    <section class="section">
-            <!-- Formulario con Formspree y validado con JS -->
-            <form action="https://formspree.io/f/xovldqpb" method="post" id="form" class="form" novalidate autocomplete="off">
-            <h2> Formulario de contacto</h2>
-            <span id="empty-apellido-error" class="error-msg"></span>
-            <span id="empty-nombre-error" class="error-msg"></span>
-            <span id="empty-email-error" class="error-msg"></span>            
-            <span id="empty-comentarios-error" class="error-msg"></span>           
-            <fieldset class="form-fieldset">
-            <input type="text" name="_gotcha" style="display:none">              
-            <input type="text" class="form-input" id="apellido" name="apellido"  maxlength="50" placeholder="Apellido:">
-            <input type="text" class="form-input" id="nombre" name="nombre"  maxlength="50" placeholder="Nombre:">
-            <input type="email" class="form-input" name="correo" id="correo"   maxlength="50" placeholder="Correo electrónico:">  
-            <textarea name="comentarios" class="form-textarea" id="comentarios"  maxlength="200" placeholder="Escribe tu consulta aquí..."></textarea>
-            <input type="submit" class="boton-submit" value="ENVIAR CONSULTA">
-            </fieldset>
-            </form>
-
-      
-    </section>
-
-
-  </main>
-
-<footer class="footer">
-  <div class="footer-container">
-
-    <!-- Datos de contacto -->
-    <div class="footer-info">
-      <h3>HERRAMIENTAS "SAN MIGUEL"</h3>
-      <p><i class="fas fa-map-marker-alt"></i>  Av. San Martín 1234, Buenos Aires</p>
-      <p><i class="fas fa-phone"></i>  (011) 1234-5678</p>
-      <p><i class="fas fa-envelope"></i>  contacto@sanmiguelherramientas.com</p>
-      <p><i class="fab fa-whatsapp"></i>  +54 9 11 2345-6789</p>
-    </div>
-
-    <!-- Enlaces internos -->
-    <div class="footer-links">
-      <h4>Secciones</h4>
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="electricas.html">Herramientas Eléctricas</a></li>
-        <li><a href="manuales.html">Herramientas Manuales</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </div>
-
-    <!-- Redes sociales -->
-    <div class="footer-redes">
-      <h4>Seguinos</h4>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f" id="Idfa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-        <a href="#"><i class="fab fa-youtube" id="Idfa-youtube"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
-
-    <!-- Newsletter con Formspree -->
-    <div class="footer-newsletter">
-      <h4>Suscribite al Newsletter</h4>
-      <form action="https://formspree.io/f/xyzpwzrz" method="POST" class="newsletter-form" autocomplete="off">
-        <input type="email" name="email" placeholder="Tu correo electrónico" required>
-        <input type="hidden" name="_subject" value="Nueva suscripción al newsletter">
-        <input type="hidden" name="_captcha" value="false">
-        <button type="submit"><i class="fas fa-paper-plane"></i></button>
-      </form>
-    </div>
-
-    <!-- Medios de pago -->
-    <div class="footer-pagos">
-      <h4>Medios de pago</h4>
-      <div class="payment-icons">
-        <i class="fab fa-cc-visa"></i>
-        <i class="fab fa-cc-mastercard"></i>
-        <i class="fab fa-cc-amex"></i>
-        <img src="../media/img/mercadopago.png" alt="MercadoPago">
-      </div>
-    </div>
-
-  </div>
-
-  <div class="footer-copy">
-    <p>&copy; 2025 HERRAMIENTAS "SAN MIGUEL" - Todos los derechos reservados</p>
-  </div>
-</footer>
-
-<script src="../js/main.js"></script>  
-<script src="../js/busqueda.js"></script>
-</body>
-</html> 
+    <script src="../js/main.js"></script>
+    <script src="../js/busqueda.js"></script>
+  </body>
+</html>

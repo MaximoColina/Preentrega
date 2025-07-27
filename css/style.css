@@ -591,3 +591,24 @@ td:first-child img {
 
 */
 
+/* Añadir esto al final del archivo style.css */
+.carrito-cantidad {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--7);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.carrito-icon-container {
+  position: relative;
+  display: inline-block;
+}
+

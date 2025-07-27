@@ -31,7 +31,39 @@ function agregarAlCarrito(id, title, price) {
   let carrito = JSON.parse(localStorage.getItem('carrito')) || {};
   carrito[id] = carrito[id] ? { ...carrito[id], cantidad: carrito[id].cantidad + 1 } : { title, price, cantidad: 1 };
   localStorage.setItem('carrito', JSON.stringify(carrito));
-  alert('Agregado al carrito');
+  
+  // Animación y actualización
+  const button = event.target;
+  button.classList.add('item-added-animation');
+  setTimeout(() => {
+    button.classList.remove('item-added-animation');
+  }, 500);
+  
+  // Actualizar carrito
+  if (typeof renderCarrito === 'function') {
+    renderCarrito();
+  }
+  if (typeof updateCartCounter === 'function') {
+    updateCartCounter();
+  }
+  
+  // Mostrar notificación
+  const notification = document.createElement('div');
+  notification.textContent = '¡Producto agregado!';
+  notification.style.position = 'fixed';
+  notification.style.bottom = '20px';
+  notification.style.right = '20px';
+  notification.style.backgroundColor = 'var(--6)';
+  notification.style.color = 'white';
+  notification.style.padding = '10px 20px';
+  notification.style.borderRadius = '5px';
+  notification.style.zIndex = '1001';
+  notification.style.animation = 'fadeIn 0.3s, fadeOut 0.3s 2s forwards';
+  document.body.appendChild(notification);
+  
+  setTimeout(() => {
+    notification.remove();
+  }, 2500);
 }
 
 function filtrarProductosPorTexto(texto) {
