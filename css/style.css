@@ -98,6 +98,19 @@ background-color: var(--1);
     background-attachment: fixed;
 }
 
+.section-contacto {
+    background-color: var(--2);
+    color: var(--3);
+    text-align: center;
+    padding-top: 30px;
+    height: 90vh; 
+    padding-bottom: 25px;
+    background-image: url(../media/img/bh2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 .form-titulo {
     color: var(--5);
