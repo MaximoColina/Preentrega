@@ -23,10 +23,19 @@ async function renderCarrito() {
     carritoTotal.textContent = '$0';
     carritoCantidad.textContent = '0';
     carritoCantidad.style.display = 'none';
+    
+    // Ocultar botón de pagar si el carrito está vacío
+    const pagarBtn = document.getElementById('pagar-btn');
+    if (pagarBtn) pagarBtn.style.display = 'none';
+    
     return;
   }
   
   carritoCantidad.style.display = 'flex';
+  
+  // Mostrar botón de pagar
+  const pagarBtn = document.getElementById('pagar-btn');
+  if (pagarBtn) pagarBtn.style.display = 'block';
   
   // Cargar todos los productos si no están cargados
   if (!window.todosLosProductos || window.todosLosProductos.length === 0) {
@@ -72,6 +81,37 @@ async function renderCarrito() {
   
   carritoTotal.textContent = `$${total.toFixed(2)}`;
   carritoCantidad.textContent = cantidad;
+}
+
+// Función para procesar el pago
+function procesarPago() {
+  // Mostrar mensaje de agradecimiento
+  const carritoItems = document.getElementById('carrito-items');
+  carritoItems.innerHTML = `
+    <div class="mensaje-compra">
+      <i class="fas fa-check-circle"></i>
+      <h3>¡Gracias por su compra!</h3>
+      <p>Su pedido ha sido procesado con éxito.</p>
+    </div>
+  `;
+  
+  // Ocultar botón de pagar y total temporalmente
+  const pagarBtn = document.getElementById('pagar-btn');
+  const carritoTotal = document.getElementById('carrito-total');
+  if (pagarBtn) pagarBtn.style.display = 'none';
+  if (carritoTotal) carritoTotal.style.display = 'none';
+  
+  // Vaciar el carrito
+  localStorage.removeItem('carrito');
+  
+  // Actualizar contador
+  updateCartCounter();
+  
+  // Después de 2 segundos, volver a mostrar el carrito vacío
+  setTimeout(() => {
+    renderCarrito();
+    if (carritoTotal) carritoTotal.style.display = 'block';
+  }, 2000);
 }
 
 // Función para eliminar un item del carrito
@@ -141,9 +181,13 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="carrito-items" id="carrito-items"></div>
         <div class="carrito-total">Total: <span id="carrito-total">$0</span></div>
+        <button id="pagar-btn" class="pagar-btn">Pagar</button>
       </div>
     `;
     document.body.insertAdjacentHTML('beforeend', carritoHTML);
+    
+    // Agregar evento al botón de pagar
+    document.getElementById('pagar-btn').addEventListener('click', procesarPago);
     
     // Actualizar el icono del carrito
     const carritoIcon = document.querySelector('.fa-shopping-cart').parentNode;
