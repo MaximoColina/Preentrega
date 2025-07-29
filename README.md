@@ -28,27 +28,17 @@ Sitio web e-commerce especializado en la venta de herramientas eléctricas y man
   - [Google Fonts](https://fonts.google.com/) - Tipografía Orbitron
 
 ## Estructura del proyecto
-herramientas-san-miguel/
-├── index.html # Página principal
-├── pages/
-│ ├── electricas.html # Herramientas eléctricas
-│ ├── manuales.html # Herramientas manuales
-│ └── contacto.html # Formulario de contacto
-├── css/
-│ ├── style.css # Estilos principales
-│ └── carrito.css # Estilos específicos del carrito
-├── js/
-│ ├── main.js # Funcionalidades comunes
-│ ├── carrito.js # Lógica del carrito
-│ ├── busqueda.js # Sistema de búsqueda
-│ ├── productosE.js # Productos eléctricos
-│ └── productosM.js # Productos manuales
-└── media/ # Assets multimedia
+
+![Estructura del proyecto](media/img/estructura.jpg)
+
 
 
 ## Configuración de la API JSONBin
 
 El proyecto utiliza una API propia en [JSONBin.io](https://jsonbin.io/) para almacenar los datos de productos. La estructura utilizada es:
+
+Endpoint actual:
+https://api.jsonbin.io/v3/b/68847e1dae596e708fbbf4a6/latest
 
 ```json
 [
@@ -62,7 +52,6 @@ El proyecto utiliza una API propia en [JSONBin.io](https://jsonbin.io/) para alm
   ...
 ]
 
-Endpoint actual:
-https://api.jsonbin.io/v3/b/68847e1dae596e708fbbf4a6/latest
+
 
 
